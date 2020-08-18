@@ -49,7 +49,7 @@ During your great expansion, the development team is constantly adding exciting 
 ![stage 5 diagram][stage-5]
 
 You and your team embark on a major architectural reform in order to fully embrace the elasticity and high availability of the AWS cloud.  So far, your service has been developed as a multi-module monolithic application. This simplified the development process and made your application easily scalable by adding more web servers. However, it has reached a point where it is responsible for a large amount of features. Scaling your system as a monolithic bloc is no longer economical. In addition, your development team has grown mature enough to split up and handle dedicated feature sets within groups. You decide that it's time to make the leap and refactor the web application into several small and independent services, also known as the microservices pattern.
-Teams can now optimize each service according to its needs and allow it to scale independently based on its own demand. They start by choosing a specialized database that is best optimized for executing the business queries. Then, they identify simple operations that are being heavily executed and migrate them to Lambda functions. This guarantees their automatic availability and scalability while running on AWS's own managed infrastructure. Thanks to the team effort, the set of services automatically scale and efficiently handle the new spike in user demand.
+Teams can now optimize each service according to its needs and allow it to scale independently based on its own demand. They start by choosing a specialized database that is best optimized for executing the business queries. Then, they identify simple operations that are being heavily executed and migrate them to Lambda functions. This guarantees their automatic availability and scalability while running on AWS's own managed infrastructure. Thanks to the team effort, the different parts of your system automatically adapt and efficiently handle the new spike in user demand.
 
 ## Day One Checklist
 
@@ -61,3 +61,7 @@ Since the first day of launching your service, you made sure to follow these ope
 - Automate your EC2 fleet management using System Manager.
 - Assess the state of your environments using TrustedAdvisor, Inspector, and GuardDuty.
 - Monitor your AWS bill using Cost Explorer and Budgets.
+
+## Congratulations
+
+You were able to successfuly keep your service up and running in the face of your startup's rapid expansion while efficiently using the power of the AWS cloud!
