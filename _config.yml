@@ -32,7 +32,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-analytics
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -54,7 +53,5 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-jekyll_analytics:
-  GoogleAnalytics:
-    id: UA-176045639-1
-    anonymizeIp: true
+# Analytics
+google_analytics: UA-176045639-1
