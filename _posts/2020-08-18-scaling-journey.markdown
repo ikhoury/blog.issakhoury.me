@@ -4,11 +4,11 @@ title: "The Scaling Journey of a Cloud Native Application"
 date: 2020-08-18 17:50:00 +0200
 categories: architecture aws
 ---
-[stage-1]: /assets/images/scaling-journey-stage-1.png
-[stage-2]: /assets/images/scaling-journey-stage-2.png
-[stage-3]: /assets/images/scaling-journey-stage-3.png
-[stage-4]: /assets/images/scaling-journey-stage-4.png
-[stage-5]: /assets/images/scaling-journey-stage-5.png
+[stage-1]: /assets/images/scaling-journey/stage-1.png
+[stage-2]: /assets/images/scaling-journey/stage-2.png
+[stage-3]: /assets/images/scaling-journey/stage-3.png
+[stage-4]: /assets/images/scaling-journey/stage-4.png
+[stage-5]: /assets/images/scaling-journey/stage-5.png
 
 ## Introduction
 
