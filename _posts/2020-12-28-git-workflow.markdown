@@ -28,7 +28,7 @@ You plan your first feature with your team and decide to start implementing it. 
 
 You start working on your new feature branch using `git switch -c feature/first-one`. After staging the necceary changes using `git add .` you commit them using `git commit -m "Implement first feature"`. As a suggestion, if your feature can be broken down into smaller sub-tasks that can be developed independently, then break down your branches into `feature/first-one/subtask-1` `feature/first-one/subtask-2` etc...
 
-> **_Branch Name_**: You might already be using an issue tracker such as Jira. Then, you can use your Jira ticket number as the branch name. The tickets will mirror the feature branches in repository.
+> **_Branch Name_**: You might already be using an issue tracker such as Jira. Then, you can use your Jira ticket number as the branch name. The tickets will mirror the feature branches in the repository.
 
 Here is a hypothetical example of a feature to help better understand this workflow.
 In order to implement the new `menu filters` feature we should figure out how to divide it into sub-tasks that can be worked on, integrated, and potentially rolled back independently. We might branch in succession as follows:
@@ -40,7 +40,7 @@ In order to implement the new `menu filters` feature we should figure out how to
 
 The combination of the subtasks completes the `menu filters` user story. Each one can be developed and merged back into master independently so that other collaborators can quickly catch up with our code changes without going through merge hell. In addition, you will receive early feedback from your tests and users.
 
-You submit a pull request for your colleagues to review and approve your changes. There are several strategies that can be used when integrating changes into master. However, to preserve a clean and linear branch history, make sure to always `squash` your commits before merging and avoid creating a second `merge commit`. Usually, your version control software (e.g GitHub, GitLab, Bitbucket...) can reasonably handle this type of merge for you and automatically add the branch name to the title of the commit message. It can also make sure your feature branch is deleted after the changes are merged and the PR is closed.
+Finally, you submit a pull request for your colleagues to review and approve your changes. There are several strategies that can be used when integrating changes into master. To preserve a clean and linear branch history, make sure to always `squash` your commits before merging and avoid creating a second `merge commit`. Usually, your version control software (e.g GitHub, GitLab, Bitbucket...) can reasonably handle this type of merge for you and automatically add the branch name to the title of the commit message. It can also delete the feature branch after the changes are merged and the PR is closed.
 
 > **_Note:_** Sync your feature branch frequently with master, at least once a day. Using rebase results in a clean history and is preferable when you are the only one using the branch. However, if your branch is shared and used by others, merge master into your branch. If you choose to rebase please have a good understanding of it.
 
@@ -60,9 +60,9 @@ You just tagged your first production release. Now, we need to bump our version 
 
 What happens if a major bug is discovered in production and the patch cannot wait for the next scheduled release? Your master branch is already  ahead and might contain code that should not be released yet. In the event that we cannot release our patch directly from master, we can create a special `hotfix` branch.
 
-If possible, we first try to patch our code on the `master` branch. This makes sure that the fix is also included in the next production release. We then `cherry pick` our fix onto our new hotfix branch. However, if the fix cannot be directly applied onto master you can merge it onto the new hotfix branch. Make sure that the bug is eventually fixed for the next production release.
+If possible, we first try to patch our code on the `master` branch. This makes sure that the fix is also included in the next production release. We then `cherry pick` our fix onto our new hotfix branch. However, if the fix cannot be directly applied onto master you can merge it onto the new hotfix branch. Make sure that the bug is eventually fixed for the next scheduled release.
 
-We branch out from the last release point into a new `hotfix-0.1.0` branch using `git checkout v0.1.0 && git switch -c hotfix-0.1.0`. Set the version to the next snapshot version `v0.1.1-SNAPSHOT`. Then, commit the fix either from master or your bugfix branch. Finally, create a new release from our hotfix branch with the patch version `v0.1.1`. You can now safely release the new patched version into production, while continuing to work on the next production release with no disruption.
+Branch out from the last release point into a new `hotfix-0.1.0` branch using `git checkout v0.1.0 && git switch -c hotfix-0.1.0`. Set the version to the next snapshot version `v0.1.1-SNAPSHOT`. Then, commit the fix either from master or your bugfix branch. Finally, create a new release from the hotfix branch with the patch version `v0.1.1`. You can now safely release the new patched version into production, while continuing to work on the next scheduled release with no disruption.
 
 ## Cheat Sheets
 
@@ -73,16 +73,14 @@ Step-by-step instructions for each scenario. Each phase assumes you are in an up
 - `mkdir my-project`
 - `cd my-project/`
 - `git init`
-- Create `README.md` file
-- `git add README.md`
-- `git commit -m "Initial commit"`
+- Create a `README.md` file and set your initial version to v0.1.0-SNAPSHOT
+- `git commit -am "Initial commit"`
 
 ### Cheat Sheet: First Feature
 
 - `git switch -c feature/first-one`
 - Add new feature
-- `git add .`
-- `git commit -m "Implement first feature"`
+- `git commit -am "Implement first feature"`
 - Create PR for review and merge your changes into master. Squash merge into master using `git merge --squash --no-commit feature/first-one`
 
 ### Cheat Sheet: Releasing your Software
