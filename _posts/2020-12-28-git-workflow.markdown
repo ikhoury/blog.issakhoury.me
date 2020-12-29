@@ -10,9 +10,9 @@ categories: engineering
 [release]: /assets/images/git-workflow/release.png
 [hotfix]: /assets/images/git-workflow/hotfix.png
 
-You are starting to work on a new software project. You want to be able to quickly develop and release new versions of your software while maintaining a well-structured development workflow. We will walk through a software development lifecycle using [Git](https://git-scm.com/) based on the [Trunk Based Development](https://trunkbaseddevelopment.com/) branching strategy. 
+You are starting to work on a new software project. You want to be able to quickly develop and release new versions of your application while maintaining a well-structured development workflow. We will walk through a software development lifecycle using [Git](https://git-scm.com/) based on the [Trunk Based Development](https://trunkbaseddevelopment.com/) branching strategy. 
 
-The goal of our development team is to have a single source of truth for stable and production ready code, the `master` branch. Every commit to the master branch must be well-tested using an automated continuous integration pipeline. It should be considered as a candidate for a production release at any time.
+The goal of our development team is to have a single source of truth for stable and production ready code, the `master` branch. Every commit to the master branch must be well-tested using an automated continuous integration pipeline. Each one should be considered as a candidate for a production release at any time.
 
 ## Initial Commit
 
@@ -26,7 +26,7 @@ Start by creating a new folder for your project. Next, open a terminal in your p
 
 You plan your first feature with your team and decide to start implementing it. The feature should be small enough to be completed in a short amount of time (at most a couple of days) and meaningful enough to deliver value on its own. In order to iterate quickly and minimize the overhead of coordinating changes across your team, be sure to **only** use _short lived_ feature branches that are regularly (at least daily) updated with the latest changes from master.
 
-You start working on your new feature branch using `git switch -c feature/first-one`. After staging the necceary changes using `git add .` you commit them using `git commit -m "Implement first feature"`. As a suggestion, if your feature can be broken down into smaller sub-tasks that incrementally add value and can be developed independently, then you can further break down your branches into `feature/first-one/subtask-1` `feature/first-one/subtask-2` etc...
+You start working on your new feature branch using `git switch -c feature/first-one`. After staging the necceary changes using `git add .` you commit them using `git commit -m "Implement first feature"`. As a suggestion, if your feature can be broken down into smaller sub-tasks that can be developed independently, then break down your branches into `feature/first-one/subtask-1` `feature/first-one/subtask-2` etc...
 
 > **_Branch Name_**: You might already be using an issue tracker such as Jira. Then, you can use your Jira ticket number as the branch name. The tickets will mirror the feature branches in repository.
 
