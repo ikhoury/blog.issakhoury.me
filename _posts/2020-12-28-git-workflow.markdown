@@ -65,7 +65,7 @@ Step-by-step instructions for each scenario. Each phase assumes you are in an up
 - `mkdir my-project`
 - `cd my-project/`
 - `git init`
-- Create a `README.md` file and set your initial version to v0.1.0-SNAPSHOT
+- Create a `README.md` file and set your initial version to `v0.1.0-SNAPSHOT`
 - `git commit -am "Initial commit"`
 
 ### Cheat Sheet: First Feature
