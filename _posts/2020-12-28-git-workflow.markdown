@@ -12,7 +12,7 @@ categories: engineering
 
 You are going to work on a new software project, and you want to be able to quickly develop and release new versions of your application using a well-structured development workflow. We will walk through a streamlined workflow using [Git](https://git-scm.com/) that's inspired by the [Trunk Based Development](https://trunkbaseddevelopment.com/) branching strategy.
 
-The goal of our development team is to have a single source of truth for stable and production ready code, the `master` branch. Every commit on the master branch must be well-tested using an automated pipeline and should be considered as a candidate for a production release. Using this strategy, you will have a linear history of versions of your released application and be able to quickly rollback to a particular one if necessary.
+The goal of our development team is to have a single source of truth for stable and production ready code, the `master` branch. Every commit on the master branch must be well-tested using an automated pipeline and should be considered as a candidate for a production release. By using this strategy you will have a linear history of the versions of your released application, and be able to quickly rollback to a particular one if necessary.
 
 ## Initial Commit
 
