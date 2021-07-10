@@ -12,13 +12,13 @@ categories: engineering data
 > _Data is the new oil - Clive Humby_
 
 Gathering data from external systems into a central platform is no easy task. When you manage to pull it off, what do you get? A **data lake**? Not so fast!
-Endless companies have tried to jump on board the Big Data train, but were they able to extract the value they expected from these Big Data platforms? After all, it is not a cheap endeavor. The truth is that most of them did not see the end of the tunnel and got stuck with a **data swamp**. A messy dump site for all the data that an engineer can get his hands on. Merely throwing data into a centralized location is not enough to make it usable for downstream data consumers. It has to be _refined_ and curated into an analytics-friendly, use-case specific dataset that a client can utilize out of the box for data analysis.
+Endless companies have tried to jump on board the Big Data train, but were they able to extract the value they expected from these Big Data platforms? After all, it is not a cheap endeavor. The truth is that most of them did not see the end of the tunnel and got stuck with a **data swamp**. A messy dump site for all the data that an engineer can get his hands on. Merely throwing data into a centralized location is not enough to make it usable for downstream data consumers. It has to be _refined_ and curated into an analytics-friendly, use-case specific dataset that a user can utilize out of the box for data analysis.
 
 ## Bronze - The Landing Layer
 
 ![Bronze diagram][bronze]
 
-Data can arrive from various sources, some of which are out of our control. We cannot keep the data stored in flight, therefore we dedicate a _Landing Zone_ for all data ingested into the platform. This layer acts as the original source of truth in our data lake. Data is kept in its original form and only used as input for transformation into the silver layer.
+Data can arrive from various sources, some of which are out of our control. We cannot keep the data stored in-flight, therefore we dedicate a _Landing Zone_ for all data ingested into the platform. This layer acts as the original source of truth in our data lake. Data is kept in its original form and only used as input for transformation into the silver layer.
 
 ### Bronze Data Lifecycle
 
@@ -40,13 +40,13 @@ Data is transitioned to long term cold storage as it ages. Data retention is enf
 
 ### Silver Data Security
 
-This layer contains data that can be used by an engineer to curate datasets for downstream consumers. Regular data users should not have access to this layer as it is typically inefficiently suited to serve their access patterns.
+This layer contains data that can be used by an engineer to curate datasets for downstream consumers. Regular data users should not have access to this layer as it is typically in an inefficient format to serve their access patterns.
 
 ## Gold - The Curated Layer
 
 ![Gold diagram][gold]
 
-These datasets are curated for the specific use case of an end user. Data is reshaped, joined, and stored in locations that will be directly accessed by consumers. The dataset will be optimized for the access patterns of its use case.
+These datasets are curated for the specific use case of an end user. Data is reshaped, joined, and stored in a location that will be directly accessed by consumers. The dataset will be optimized for the access patterns of its use case.
 
 ### Gold Data Lifecycle
 
