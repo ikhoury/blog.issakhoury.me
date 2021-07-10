@@ -7,5 +7,5 @@ My personal blog hosted at https://blog.issakhoury.me.
 Serve the blog locally using [Jekyll](https://jekyllrb.com/).
 
 ```shell
-jekyll serve
+bundle exec jekyll serve
 ```
