@@ -40,7 +40,7 @@ Data is transitioned to long term cold storage as it ages. Data retention is enf
 
 ### Silver Data Security
 
-This layer contains data that can be used by an engineer to curate datasets for downstream consumers. Regular data users should not have access to this layer as it is typically in an inefficient format to serve their access patterns.
+This layer contains data that can be used by an engineer to curate datasets for downstream consumers. Regular data users are encouraged to explore these datasets, come up with new use cases, and then work together with engineers to build a more curated view of the data they need.
 
 ## Gold - The Curated Layer
 
