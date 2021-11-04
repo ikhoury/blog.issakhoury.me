@@ -46,7 +46,7 @@ This layer contains data that can be used by an engineer to curate datasets for 
 
 ![Gold diagram][gold]
 
-These datasets are curated for the specific use case of an end user. Data is reshaped, joined, and stored in a location that will be directly accessed by consumers. The dataset will be optimized for the access patterns of its use case.
+These datasets are curated for specific use cases from our data analysts to help them more efficiently solve their business problem. Using the cleaned silver layer, data is reshaped, joined, filtered, aggregated, and made available to our consumer. The dataset is optimized for the access patterns of its use case.
 
 ### Gold Data Lifecycle
 
